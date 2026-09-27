@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h1>Dashboard</h1>
+
+<table>
+    <tr>
+        <th>Título</th>
+        <th>Ativo</th>
+    </tr>
+
+    {% for incidente in incidentes %}
+    <tr>
+        <td>{{ incidente.titulo }}</td>
+        <td>
+            <img src="/icone.png" alt="{{ incidente.ativo }}">
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
